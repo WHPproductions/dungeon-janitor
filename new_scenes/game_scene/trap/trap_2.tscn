@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://ded1f6ahdulgi"]
+
+[ext_resource type="Script" uid="uid://c7viiu1gijkq7" path="res://new_scenes/game_scene/trap/trap_2.gd" id="1_2b132"]
+[ext_resource type="Texture2D" uid="uid://dfu3005vsfjk0" path="res://new_scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_1.png" id="2_o1lmo"]
+[ext_resource type="Texture2D" uid="uid://lgcjmh153vpv" path="res://new_scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_2.png" id="3_lp54e"]
+[ext_resource type="Texture2D" uid="uid://h3ramcnslo10" path="res://new_scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_3.png" id="4_t1j4s"]
+[ext_resource type="Texture2D" uid="uid://cs4jh836ndo87" path="res://new_scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_4.png" id="5_jyt4o"]
+[ext_resource type="Texture2D" uid="uid://b4i7521hmn1qf" path="res://new_scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_4.png" id="6_lp54e"]
+[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://new_scenes/dungeon_assets/GuiAssets/gdp_theme.tres" id="6_o1lmo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lek78"]
+atlas = ExtResource("2_o1lmo")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcr7k"]
+atlas = ExtResource("3_lp54e")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgv4o"]
+atlas = ExtResource("4_t1j4s")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sh0l"]
+atlas = ExtResource("5_jyt4o")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1j4s"]
+atlas = ExtResource("6_lp54e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lek78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcr7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgv4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sh0l")
+}],
+"loop": 0,
+"name": &"active",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1j4s")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trap"]
+size = Vector2(14, 14)
+
+[node name="Trap_2" type="Area2D" unique_id=868093437]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_2b132")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791809998]
+sprite_frames = SubResource("SpriteFrames_trap")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1621463452]
+shape = SubResource("RectangleShape2D_trap")
+
+[node name="Label" type="Label" parent="." unique_id=310977788]
+visible = false
+offset_left = -20.0
+offset_top = -27.0
+offset_right = 20.0
+offset_bottom = -4.0
+theme = ExtResource("6_o1lmo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

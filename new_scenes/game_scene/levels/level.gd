@@ -25,6 +25,7 @@ var _ended: bool = false
 
 func _ready() -> void:
 	level_state = GameState.get_level_state(scene_file_path)
+	$Music.play()
 	_time_left = shift_duration_seconds
 	_cleanables_layer.update_internals()
 	_traps_layer.update_internals()
@@ -109,6 +110,9 @@ func _end_level(won: bool) -> void:
 	if won:
 		level_won.emit(next_level_path)
 	else:
+		%Player.die()
+		$Music.stop()
+		$GameOverSFX.play()
 		level_lost.emit()
 	_show_end_overlay(won)
 

@@ -27,7 +27,6 @@ func _process(delta: float) -> void:
 		return
 
 	_sprite.frame = round((_progress / clean_time) * _frame_count)
-	print(_sprite.frame)
 
 	_progress_bar.global_position = global_position + Vector2(-18, -22)
 

@@ -2,8 +2,7 @@ extends CharacterBody2D
 
 signal died
 signal health_changed(current: int, maximum: int)
-
-const SPEED := 100.0
+var speed : float = 100.0
 
 @export var max_health: int = 3
 
@@ -29,14 +28,17 @@ func _physics_process(_delta: float) -> void:
 
 	var direction := _get_movement_input()
 	if direction and not is_cleaning:
-		velocity = direction * SPEED
+		velocity = direction * speed
 		_sprite.play("movement")
 		_sprite.flip_h = direction.x < 0.0
 	elif is_cleaning:
 		velocity = Vector2.ZERO
+		if $SweepSFX.playing == false:
+			$SweepSFX.play()
 		_sprite.play("swipe")
 	else:
 		velocity = Vector2.ZERO
+		$SweepSFX.stop()
 		_sprite.play("idle")
 
 	move_and_slide()
@@ -59,9 +61,13 @@ func _is_cleaning_nearby() -> bool:
 			return true
 	return false
 
+func die() -> void:
+	speed = 0
+	_sprite.play("death")
 
 func take_damage(amount: int = 1) -> void:
 	if health <= 0:
+		die()
 		return
 	health = maxi(health - amount, 0)
 	health_changed.emit(health, max_health)

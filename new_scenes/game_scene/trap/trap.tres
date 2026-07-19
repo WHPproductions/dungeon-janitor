@@ -1,0 +1,13 @@
+[gd_resource type="TileSet" format=3 uid="uid://dasvtrhaiqiw4"]
+
+[ext_resource type="PackedScene" uid="uid://c8trap01" path="res://new_scenes/game_scene/trap/trap.tscn" id="1_bajsr"]
+[ext_resource type="PackedScene" uid="uid://dfj5fwehlhe1o" path="res://new_scenes/game_scene/trap/trap_1.tscn" id="2_tqkqm"]
+[ext_resource type="PackedScene" uid="uid://ded1f6ahdulgi" path="res://new_scenes/game_scene/trap/trap_2.tscn" id="3_tqkqm"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t8ohj"]
+scenes/1/scene = ExtResource("1_bajsr")
+scenes/2/scene = ExtResource("2_tqkqm")
+scenes/3/scene = ExtResource("3_tqkqm")
+
+[resource]
+sources/0 = SubResource("TileSetScenesCollectionSource_t8ohj")

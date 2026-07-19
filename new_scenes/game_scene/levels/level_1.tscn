@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://c8exitdoor01" path="res://new_scenes/game_scene/exit_door/exit_door.tscn" id="8_door"]
 [ext_resource type="PackedScene" uid="uid://c8shifthud01" path="res://new_scenes/game_scene/hud/shift_hud.tscn" id="9_hud"]
 [ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://new_scenes/dungeon_assets/GuiAssets/gdp_theme.tres" id="10_t8ohj"]
+[ext_resource type="AudioStream" uid="uid://ce8t7wbn8ggpu" path="res://new_scenes/game_scene/levels/game_over.mp3" id="11_5u632"]
+[ext_resource type="AudioStream" uid="uid://08uhvnwd0eis" path="res://new_scenes/game_scene/levels/Artpra - First Arcade.mp3" id="12_itt21"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hoyc"]
 texture = ExtResource("2_sfclg")
@@ -190,3 +192,9 @@ zoom = Vector2(5, 5)
 [node name="ShiftHUD" parent="ui" unique_id=2025398054 instance=ExtResource("9_hud")]
 unique_name_in_owner = true
 theme = ExtResource("10_t8ohj")
+
+[node name="GameOverSFX" type="AudioStreamPlayer" parent="." unique_id=1511799000]
+stream = ExtResource("11_5u632")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1886225167]
+stream = ExtResource("12_itt21")

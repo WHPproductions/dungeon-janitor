@@ -17,8 +17,6 @@ update_content = true
 title = "KAU ADALAH OB!"
 text = "Sayang kamu tidak bisa ikut bertempur melawan party pahlawan, karena Demon Lord melihatmu sebagai minion yang tidak berguna :(
 Kamu saat ini ditugaskan sebagai janitor dungeon! Bersihkan semua kotoran sebelum shift habis.
-Hindari jebakan yang masih aktif.
-Tahan SPACE di dekat kotoran untuk ngepel/pungut.
 Setelah ruangan 100% bersih? Lari ke pintu keluar!"
 
 [node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(1788474031) index="0" unique_id=1049966061]
@@ -29,6 +27,4 @@ text = "KAU ADALAH OB!"
 theme_override_font_sizes/normal_font_size = 25
 text = "Sayang kamu tidak bisa ikut bertempur melawan party pahlawan, karena Demon Lord melihatmu sebagai minion yang tidak berguna :(
 Kamu saat ini ditugaskan sebagai janitor dungeon! Bersihkan semua kotoran sebelum shift habis.
-Hindari jebakan yang masih aktif.
-Tahan SPACE di dekat kotoran untuk ngepel/pungut.
 Setelah ruangan 100% bersih? Lari ke pintu keluar!"
