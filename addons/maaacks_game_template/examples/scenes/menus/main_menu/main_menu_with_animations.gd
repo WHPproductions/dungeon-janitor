@@ -22,6 +22,7 @@ func new_game() -> void:
 	if confirm_new_game and continue_game_button.visible:
 		new_game_confirmation.show()
 	else:
+		GameState.reset()
 		GameStateExample.reset()
 		load_game_scene()
 

@@ -245,12 +245,14 @@ radius = 8.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1130119223]
 motion_mode = 1
+collision_layer = 2
+collision_mask = 1
 script = ExtResource("1_mw10v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=935457757]
 sprite_frames = SubResource("SpriteFrames_5h11f")
 animation = &"idle"
-frame_progress = 0.6327665
+frame_progress = 0.47571284
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=345403895]
 position = Vector2(-3, 6)

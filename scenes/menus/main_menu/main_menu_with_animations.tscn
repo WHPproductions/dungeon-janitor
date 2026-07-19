@@ -318,6 +318,7 @@ graph_offset = Vector2(-180.277, 49)
 script = ExtResource("2_ixa71")
 level_select_packed_scene = null
 confirm_new_game = true
+game_scene_path = "uid://bnsgvocdn56v1"
 options_packed_scene = ExtResource("3_2k5l7")
 credits_packed_scene = ExtResource("4_vsp5b")
 
@@ -331,6 +332,9 @@ parameters/conditions/intro_done = false
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(2112060331) index="0" unique_id=556427956]
 modulate = Color(1, 1, 1, 0)
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=359406872]
+text = "Live2Dev 2026"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(1510335937) index="0" unique_id=930520368]
 modulate = Color(1, 1, 1, 0)
@@ -365,10 +369,11 @@ offset_left = -210.0
 offset_top = -100.0
 offset_right = 210.0
 offset_bottom = 100.0
+ignore_siblings = false
+title = "New Game"
 text = "Are you sure you want to start a new game?
 
 All progress in the current game will be lost."
-title = "New Game"
 
 [node name="MouseFilter" type="Control" parent="." index="8" unique_id=1554668260]
 layout_mode = 1
@@ -379,6 +384,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
+
+[node name="ExitConfirmation" parent="." index="9" unique_id=912502155]
+ignore_siblings = false
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ContinueGameButton" to="." method="_on_continue_game_button_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
