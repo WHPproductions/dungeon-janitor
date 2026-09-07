@@ -3,4 +3,3 @@
 
 # Exclude github directory
 /.github        export-ignore
-*.exe filter=lfs diff=lfs merge=lfs -text
