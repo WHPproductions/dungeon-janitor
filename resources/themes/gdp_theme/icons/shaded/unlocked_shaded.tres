@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://bxwea7ljsrfjb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mhirl"]
+
+[resource]
+atlas = SubResource("CompressedTexture2D_mhirl")
+region = Rect2(73, 37, 10, 10)
+margin = Rect2(0, 0, 1, 0)

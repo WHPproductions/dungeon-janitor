@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bx3ouhvr3rg8d"
+path="res://.godot/imported/JDSherbert - Ultimate UI SFX Pack - Error - 1.ogg-8844e10fc13a6f81b4aad2f0da4e8451.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Ultimate UI SFX Pack (FREE)/JDSherbert - Ultimate UI SFX Pack (FREE)/Stereo/ogg/JDSherbert - Ultimate UI SFX Pack - Error - 1.ogg"
+dest_files=["res://.godot/imported/JDSherbert - Ultimate UI SFX Pack - Error - 1.ogg-8844e10fc13a6f81b4aad2f0da4e8451.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

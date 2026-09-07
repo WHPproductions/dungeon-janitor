@@ -28,6 +28,8 @@ func add_levels_to_container() -> void:
 		level_buttons_container.add_item(button_name)
 		level_paths.append(file_path)
 
+
+
 func _on_level_buttons_container_item_activated(index: int) -> void:
 	GameState.set_checkpoint_level_path(level_paths[index])
 	level_selected.emit()

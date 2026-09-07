@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ct5fk10l6fklh"]
+
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_e3u22"]
+[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="2_s6bth"]
+
+[node name="OverlaidWindow" unique_id=1122261693 instance=ExtResource("1_e3u22")]
+process_mode = 3
+custom_minimum_size = Vector2(420, 200)
+theme = ExtResource("2_s6bth")
+pauses_game = true
+update_content = true
+title = "Impostor Sampah"
+text = "Huff capeknya, mana kaki aku cuman tulang lagi. Tapi akhirnya di level selanjutnya, hey tunggu kenapa banyak kotoran ini yang kelihatan aneh?
+
+Perhatikanlah apa yang sedang anda bersihkan, siapa tahu ada yang lebih buruk daripada sampah"
+
+[node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(1788474031) index="0" unique_id=1049966061]
+theme_override_font_sizes/font_size = 20
+text = "Impostor Sampah"
+
+[node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(590613964) index="0" unique_id=617407155]
+text = "Huff capeknya, mana kaki aku cuman tulang lagi. Tapi akhirnya di level selanjutnya, hey tunggu kenapa banyak kotoran ini yang kelihatan aneh?
+
+Perhatikanlah apa yang sedang anda bersihkan, siapa tahu ada yang lebih buruk daripada sampah"

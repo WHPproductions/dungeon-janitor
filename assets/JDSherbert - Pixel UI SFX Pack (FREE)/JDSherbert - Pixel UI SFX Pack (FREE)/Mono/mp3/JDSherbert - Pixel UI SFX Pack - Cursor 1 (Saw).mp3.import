@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chd75xh2ug0ct"
+path="res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Cursor 1 (Saw).mp3-e94bf646580ab2eeb202fb4ddca3f5b5.mp3str"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Pixel UI SFX Pack (FREE)/JDSherbert - Pixel UI SFX Pack (FREE)/Mono/mp3/JDSherbert - Pixel UI SFX Pack - Cursor 1 (Saw).mp3"
+dest_files=["res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Cursor 1 (Saw).mp3-e94bf646580ab2eeb202fb4ddca3f5b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

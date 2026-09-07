@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bh4ajta3fxfv8"
+path="res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Select 1 (Square).wav-468c34f463a6081226016369217ddb96.sample"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Pixel UI SFX Pack (FREE)/JDSherbert - Pixel UI SFX Pack (FREE)/Stereo/wav (HD)/JDSherbert - Pixel UI SFX Pack - Select 1 (Square).wav"
+dest_files=["res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Select 1 (Square).wav-468c34f463a6081226016369217ddb96.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

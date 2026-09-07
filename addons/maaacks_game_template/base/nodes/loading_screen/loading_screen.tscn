@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cd0jbh4metflb"]
 
 [ext_resource type="Script" uid="uid://dgeewyjjpk4qn" path="res://addons/maaacks_game_template/base/nodes/loading_screen/loading_screen.gd" id="1_gbk34"]
+[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="2_n1vgc"]
 
 [node name="LoadingScreen" type="CanvasLayer" unique_id=788661482]
 process_mode = 3
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_n1vgc")
 
 [node name="BackPanel" type="Panel" parent="Control" unique_id=604252196]
 layout_mode = 0
@@ -64,12 +66,14 @@ max_value = 1.0
 
 [node name="ErrorMessage" type="AcceptDialog" parent="Control" unique_id=1421740495]
 unique_name_in_owner = true
+oversampling_override = 1.0
 title = "Loading Error"
 initial_position = 2
 size = Vector2i(360, 100)
 
 [node name="StalledMessage" type="ConfirmationDialog" parent="Control" unique_id=1733180994]
 unique_name_in_owner = true
+oversampling_override = 1.0
 title = "Loading Stalled"
 initial_position = 2
 size = Vector2i(360, 100)

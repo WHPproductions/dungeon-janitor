@@ -12,7 +12,28 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 bbcode_enabled = true
-text = "[font_size=48]Collaborators[/font_size]
+text = "[font_size=48]Anda Dipromosikan[/font_size]
+[font_size=32]Menjadi Minion Dungeon[/font_size]
+
+Setelah Demon Lord melihat hasil kerja keras mu, ia terasa kagum.
+Tnpa basa basi ia mempromosikanmu menjadi minion dungeon.
+
+Ternayata benar, kerja keras pasti terbalaskan
+
+[font_size=48]Team[/font_size]
+[font_size=24]Sci-FY Production[/font_size]
+Fadli Haidar 
+Muhammad Yazid Zinky Arisona 
+Muhammad Satrio Pratama
+
+[font_size=32]Thank You Live2Dev 2026[/font_size]
+
+
+
+
+
+[font_size=64]Attribution[/font_size]
+[font_size=48]Collaborators[/font_size]
 
 [font_size=32]Godot Game Template[/font_size]
 [img=80]res:///assets/plugin_logo/logo.png[/img]  
@@ -48,6 +69,8 @@ License: [url=https://github.com/microsoft/vscode/blob/main/LICENSE.txt]MIT Lice
 Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
 Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
 License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+Sounds by JDSherbert – https://jdsherbert.itch.io
 "
 fit_content = true
 scroll_active = false

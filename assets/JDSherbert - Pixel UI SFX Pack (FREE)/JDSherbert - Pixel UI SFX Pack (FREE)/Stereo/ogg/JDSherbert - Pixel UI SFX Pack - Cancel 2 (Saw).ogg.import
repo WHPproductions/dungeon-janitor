@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpw86kui3ohvv"
+path="res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Cancel 2 (Saw).ogg-f4ac0c808e4bdb29cc1b1c9889b8c89b.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Pixel UI SFX Pack (FREE)/JDSherbert - Pixel UI SFX Pack (FREE)/Stereo/ogg/JDSherbert - Pixel UI SFX Pack - Cancel 2 (Saw).ogg"
+dest_files=["res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Cancel 2 (Saw).ogg-f4ac0c808e4bdb29cc1b1c9889b8c89b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

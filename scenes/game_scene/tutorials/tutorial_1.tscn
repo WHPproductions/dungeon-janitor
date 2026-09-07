@@ -1,19 +1,29 @@
-[gd_scene format=3 uid="uid://ks83y4cfd5a5"]
+[gd_scene format=3 uid="uid://de4e87nb1s3jr"]
 
-[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_b2dkv"]
+[ext_resource type="PackedScene" uid="uid://6gdbfi0172ji" path="res://addons/maaacks_game_template/base/nodes/windows/overlaid_window.tscn" id="1_18u27"]
+[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="2_u0qfc"]
 
-[node name="OverlaidWindow" unique_id=2002109630 instance=ExtResource("1_b2dkv")]
-custom_minimum_size = Vector2(420, 200)
+[node name="OverlaidWindow" unique_id=2002109630 instance=ExtResource("1_18u27")]
+process_mode = 3
+custom_minimum_size = Vector2(480, 220)
+offset_left = -335.5
+offset_top = -165.5
+offset_right = 335.5
+offset_bottom = 165.5
+theme = ExtResource("2_u0qfc")
+pauses_game = true
 update_content = true
-text = "Click the Win button to progress.
-Click the Lose button to try again."
-title = "Tutorial"
-title_font_size = 20
+title = "KAU ADALAH OB!"
+text = "Sayang kamu tidak bisa ikut bertempur dengan yang lain, karena Demon Lord melihatmu sebagai minion yang tidak berguna :(
+
+Kamu saat ini ditugaskan sebagai janitor dungeon! Bersihkan semua kotoran sebelum shift habis. Setelah ruangan 100% bersih? Lari ke pintu keluar!"
 
 [node name="TitleLabel" parent="ContentContainer/BoxContainer/TitleMargin/BoxContainer" parent_id_path=PackedInt32Array(1788474031) index="0" unique_id=1049966061]
-theme_override_font_sizes/font_size = 20
-text = "Tutorial"
+theme_override_font_sizes/font_size = 30
+text = "KAU ADALAH OB!"
 
 [node name="DescriptionLabel" parent="ContentContainer/BoxContainer/BodyMargin" parent_id_path=PackedInt32Array(590613964) index="0" unique_id=617407155]
-text = "Click the Win button to progress.
-Click the Lose button to try again."
+theme_override_font_sizes/normal_font_size = 25
+text = "Sayang kamu tidak bisa ikut bertempur dengan yang lain, karena Demon Lord melihatmu sebagai minion yang tidak berguna :(
+
+Kamu saat ini ditugaskan sebagai janitor dungeon! Bersihkan semua kotoran sebelum shift habis. Setelah ruangan 100% bersih? Lari ke pintu keluar!"

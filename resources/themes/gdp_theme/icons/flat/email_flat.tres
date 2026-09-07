@@ -1,0 +1,5 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://b0ypnwm3jp0e1"]
+
+[resource]
+region = Rect2(85, 230, 10, 8)
+margin = Rect2(3, 3, 3, 4)

@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dwuwsd1jng2ce"]
+
+[resource]
+content_margin_left = 6.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+region_rect = Rect2(171, 239, 16, 16)

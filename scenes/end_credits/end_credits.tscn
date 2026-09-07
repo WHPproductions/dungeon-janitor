@@ -7,7 +7,7 @@
 
 [node name="EndCredits" unique_id=1459886603 instance=ExtResource("1_0sycx")]
 script = ExtResource("2_2v40y")
-main_menu_scene_path = ""
+main_menu_scene_path = "uid://dhr7kwfkmlq7o"
 force_mouse_mode_visible = false
 
 [node name="BackgroundMusicPlayer" parent="." index="0" unique_id=694489322 instance=ExtResource("3_bfvdl")]

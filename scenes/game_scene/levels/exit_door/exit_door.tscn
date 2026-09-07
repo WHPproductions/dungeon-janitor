@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8exitdoor01"]
+
+[ext_resource type="Script" uid="uid://d1w2n5c75tci7" path="res://scenes/game_scene/levels/exit_door/exit_door.gd" id="1_sv6f0"]
+[ext_resource type="Texture2D" uid="uid://b77lpicwexygy" path="res://scenes/game_scene/levels/Dungeon_Tileset.png" id="2_faa04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujk5d"]
+atlas = ExtResource("2_faa04")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_door"]
+size = Vector2(14, 16)
+
+[node name="ExitDoor" type="Area2D" unique_id=1826494045]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_sv6f0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=445529353]
+texture = SubResource("AtlasTexture_ujk5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=229736931]
+shape = SubResource("RectangleShape2D_door")

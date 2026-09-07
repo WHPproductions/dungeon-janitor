@@ -1,3 +1,24 @@
+
+[font_size=48]Anda Dipromosikan[/font_size]
+[font_size=32]Menjadi Minion Dungeon[/font_size]
+
+Setelah Demon Lord melihat hasil kerja keras mu, ia terasa kagum.
+Tnpa basa basi ia mempromosikanmu menjadi minion dungeon.
+
+Ternayata benar, kerja keras pasti terbalaskan
+
+[font_size=48]Team[/font_size]
+[font_size=24]Sci-FY Production[/font_size]
+Fadli Haidar 
+Muhammad Yazid Zinky Arisona 
+Muhammad Satrio Pratama
+
+[font_size=32]Thank You Live2Dev 2026[/font_size]
+
+
+
+
+
 # Attribution
 ## Collaborators
 
@@ -35,3 +56,5 @@ License: [MIT License](https://github.com/microsoft/vscode/blob/main/LICENSE.txt
 Author: [Linus Torvalds](https://github.com/torvalds)  
 Source: [git-scm.com](https://git-scm.com/downloads)  
 License: [GNU General Public License version 2](https://opensource.org/licenses/GPL-2.0)
+
+Sounds by JDSherbert – https://jdsherbert.itch.io

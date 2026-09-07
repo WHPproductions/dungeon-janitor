@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://qk1caoe37q1h"
+path="res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Select 2 (Sine).ogg-2b5373e49719bd749a7a460e2456a01e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Pixel UI SFX Pack (FREE)/JDSherbert - Pixel UI SFX Pack (FREE)/Stereo/ogg/JDSherbert - Pixel UI SFX Pack - Select 2 (Sine).ogg"
+dest_files=["res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Select 2 (Sine).ogg-2b5373e49719bd749a7a460e2456a01e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

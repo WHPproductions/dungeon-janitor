@@ -1,0 +1,80 @@
+{
+	"categories": [
+		{
+			"uuid": "e90f5ed9-11e1-4f23-951a-0e598bf7cfff",
+			"title": "Task",
+			"color": "569eff"
+		},
+		{
+			"uuid": "288c603a-f0e6-4b52-92b0-4a3989551a6f",
+			"title": "Technical Task",
+			"color": "dd9328"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "f3087f38-bacb-46fa-ab83-d15a054c2757",
+			"title": "Todo",
+			"tasks": [
+				"1cd15f60-4e40-4018-adc3-8f671a297f42",
+				"9e79a590-d362-4d5b-aa20-e4cd9be6bcb2",
+				"3e36cc73-e225-4195-9fdc-cf4b367319a6"
+			]
+		},
+		{
+			"uuid": "6c567b3f-d86a-42fb-aac7-a27b2878cf18",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "278084f3-ff5c-4cdb-acff-1b6e4acd0c98",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "1cd15f60-4e40-4018-adc3-8f671a297f42",
+			"title": "Rapihin scene-scenenya",
+			"description": "",
+			"category": "e90f5ed9-11e1-4f23-951a-0e598bf7cfff",
+			"steps": []
+		},
+		{
+			"uuid": "9e79a590-d362-4d5b-aa20-e4cd9be6bcb2",
+			"title": "Jadiin semua scene level beneran mati pas habis waktu",
+			"description": "asdasdasd",
+			"category": "e90f5ed9-11e1-4f23-951a-0e598bf7cfff",
+			"steps": [
+				{
+					"details": "aselole",
+					"done": false
+				},
+				{
+					"details": "elolesa",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "3e36cc73-e225-4195-9fdc-cf4b367319a6",
+			"title": "Perbaiki level selection",
+			"description": "",
+			"category": "e90f5ed9-11e1-4f23-951a-0e598bf7cfff",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"f3087f38-bacb-46fa-ab83-d15a054c2757"
+			],
+			[
+				"6c567b3f-d86a-42fb-aac7-a27b2878cf18"
+			],
+			[
+				"278084f3-ff5c-4cdb-acff-1b6e4acd0c98"
+			]
+		]
+	}
+}

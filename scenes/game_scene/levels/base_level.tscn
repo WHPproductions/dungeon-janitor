@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://sf3dnlvj8sfg"]
+
+[ext_resource type="Script" uid="uid://glyft15ejvw5" path="res://scenes/game_scene/levels/level.gd" id="1_pnxco"]
+[ext_resource type="Script" uid="uid://co4etiu52qfm" path="res://scenes/game_scene/tutorial_manager.gd" id="2_dn6h0"]
+[ext_resource type="PackedScene" uid="uid://b3r2wx5usnto4" path="res://scenes/game_scene/levels/map.tscn" id="4_77bc7"]
+[ext_resource type="TileSet" uid="uid://dasvtrhaiqiw4" path="res://scenes/game_scene/trap/trap.tres" id="5_4yf8q"]
+[ext_resource type="TileSet" uid="uid://df2t7jweurxis" path="res://scenes/game_scene/cleanable/cleanable_tileset.tres" id="6_d1jaj"]
+[ext_resource type="PackedScene" uid="uid://c8exitdoor01" path="res://scenes/game_scene/levels/exit_door/exit_door.tscn" id="7_okxyx"]
+[ext_resource type="PackedScene" uid="uid://be6ya3ftkr2ee" path="res://scenes/game_scene/player/player.tscn" id="8_ut31b"]
+[ext_resource type="PackedScene" uid="uid://c8shifthud01" path="res://scenes/game_scene/hud/shift_hud.tscn" id="9_0lk0a"]
+[ext_resource type="AudioStream" uid="uid://ce8t7wbn8ggpu" path="res://scenes/game_scene/levels/game_over.mp3" id="10_u4sdr"]
+[ext_resource type="AudioStream" uid="uid://08uhvnwd0eis" path="res://scenes/game_scene/levels/Artpra - First Arcade.mp3" id="11_14sth"]
+
+[node name="BaseLevel" type="Node2D" unique_id=1621307367]
+script = ExtResource("1_pnxco")
+shift_duration_seconds = 20.0
+
+[node name="TutorialManager" type="Node" parent="." unique_id=448883273]
+unique_name_in_owner = true
+script = ExtResource("2_dn6h0")
+
+[node name="Map" parent="." unique_id=1016121073 instance=ExtResource("4_77bc7")]
+unique_name_in_owner = true
+
+[node name="Traps" type="TileMapLayer" parent="." unique_id=1204697409]
+unique_name_in_owner = true
+tile_set = ExtResource("5_4yf8q")
+
+[node name="Doors" type="TileMapLayer" parent="." unique_id=1608658595]
+unique_name_in_owner = true
+
+[node name="Cleanables" type="TileMapLayer" parent="." unique_id=416241276]
+unique_name_in_owner = true
+tile_set = ExtResource("6_d1jaj")
+
+[node name="ExitDoor" parent="." unique_id=1714173354 instance=ExtResource("7_okxyx")]
+unique_name_in_owner = true
+
+[node name="Player" parent="." unique_id=1130119223 instance=ExtResource("8_ut31b")]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1876622931]
+zoom = Vector2(5, 5)
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=845676664]
+
+[node name="ShiftHUD" parent="ui" unique_id=2025398054 instance=ExtResource("9_0lk0a")]
+unique_name_in_owner = true
+
+[node name="GameOverSFX" type="AudioStreamPlayer" parent="." unique_id=1511799000]
+stream = ExtResource("10_u4sdr")
+bus = &"SFX"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1886225167]
+stream = ExtResource("11_14sth")
+bus = &"Music"
+parameters/looping = true

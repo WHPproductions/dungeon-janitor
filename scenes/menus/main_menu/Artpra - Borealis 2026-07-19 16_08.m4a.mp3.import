@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c435gnqu5ncdm"
+path="res://.godot/imported/Artpra - Borealis 2026-07-19 16_08.m4a.mp3-8cf548a03bc6abbf72cbebb2d46016c3.mp3str"
+
+[deps]
+
+source_file="res://scenes/menus/main_menu/Artpra - Borealis 2026-07-19 16_08.m4a.mp3"
+dest_files=["res://.godot/imported/Artpra - Borealis 2026-07-19 16_08.m4a.mp3-8cf548a03bc6abbf72cbebb2d46016c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

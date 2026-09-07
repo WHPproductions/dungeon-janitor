@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dri1ooosqe71n"
+path="res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Error 1 (Sine).mp3-20b6bb85125a9cc0368fd8a3768e34dc.mp3str"
+
+[deps]
+
+source_file="res://assets/JDSherbert - Pixel UI SFX Pack (FREE)/JDSherbert - Pixel UI SFX Pack (FREE)/Stereo/mp3/JDSherbert - Pixel UI SFX Pack - Error 1 (Sine).mp3"
+dest_files=["res://.godot/imported/JDSherbert - Pixel UI SFX Pack - Error 1 (Sine).mp3-20b6bb85125a9cc0368fd8a3768e34dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
