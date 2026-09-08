@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c8trap01"]
+
+[ext_resource type="Script" uid="uid://birov2ktvfwy8" path="res://scenes/game_scene/trap/spike_trap.gd" id="1_1u0k6"]
+[ext_resource type="Texture2D" uid="uid://cwbhdj3wnkjb7" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_1.png" id="2_lq782"]
+[ext_resource type="Texture2D" uid="uid://bn56pt550onkh" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png" id="3_laykd"]
+[ext_resource type="Texture2D" uid="uid://cpdb0aj614yul" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_4.png" id="4_f1uwc"]
+[ext_resource type="Texture2D" uid="uid://37mo1tgjtp4k" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_3.png" id="5_8gb1b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j5xn"]
+atlas = ExtResource("5_8gb1b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lq782")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_laykd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1uwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8gb1b")
+}],
+"loop": 1,
+"name": &"active",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j5xn")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trap"]
+size = Vector2(14, 10)
+
+[node name="SpikeTrap" type="Area2D" unique_id=868093437 groups=["Trap"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_1u0k6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791809998]
+sprite_frames = SubResource("SpriteFrames_trap")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1621463452]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_trap")
+
+[node name="CycleTimer" type="Timer" parent="." unique_id=963239657]
+one_shot = true

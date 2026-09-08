@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://duhwc7wufsc7c" path="res://scenes/game_scene/cleanable/cleanable.gd" id="1_udipb"]
 [ext_resource type="Texture2D" uid="uid://blpvwgn4jk6kl" path="res://scenes/game_scene/cleanable/skeleton.png" id="2_udipb"]
 [ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="3_gyayw"]
+[ext_resource type="Shape2D" uid="uid://b18eehdwm45kw" path="res://scenes/game_scene/cleanable/cleanable_range_collision.tres" id="3_tv6su"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxheo"]
 atlas = ExtResource("2_udipb")
@@ -33,9 +34,7 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_u7gxc"]
-
-[node name="Cleanable2" type="Area2D" unique_id=1450675459]
+[node name="Cleanable2" type="Area2D" unique_id=1450675459 groups=["Cleanable"]]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_udipb")
@@ -46,7 +45,7 @@ frame = 2
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506634432]
-shape = SubResource("CircleShape2D_u7gxc")
+shape = ExtResource("3_tv6su")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=423899827]
 visible = false

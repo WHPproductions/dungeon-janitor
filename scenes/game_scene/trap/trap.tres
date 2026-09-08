@@ -1,19 +1,19 @@
 [gd_resource type="TileSet" format=3 uid="uid://dasvtrhaiqiw4"]
 
-[ext_resource type="PackedScene" uid="uid://c8trap01" path="res://scenes/game_scene/trap/trap.tscn" id="1_bajsr"]
-[ext_resource type="PackedScene" uid="uid://dfj5fwehlhe1o" path="res://scenes/game_scene/trap/trap_1.tscn" id="2_tqkqm"]
-[ext_resource type="PackedScene" uid="uid://ded1f6ahdulgi" path="res://scenes/game_scene/trap/trap_2.tscn" id="3_tqkqm"]
-[ext_resource type="PackedScene" uid="uid://pgrq765xgr23" path="res://scenes/game_scene/trap/trap_3.tscn" id="4_tk154"]
-[ext_resource type="PackedScene" uid="uid://dh0htyjhkxvlp" path="res://scenes/game_scene/trap/trap_4.tscn" id="5_sa2mn"]
-[ext_resource type="PackedScene" uid="uid://ctcac06on3x3m" path="res://scenes/game_scene/trap/trap_5.tscn" id="6_6n54v"]
+[ext_resource type="PackedScene" uid="uid://c8trap01" path="res://scenes/game_scene/trap/spike_trap.tscn" id="1_3w7ni"]
+[ext_resource type="PackedScene" uid="uid://dfj5fwehlhe1o" path="res://scenes/game_scene/trap/hidden_trap.tscn" id="2_ppyk3"]
+[ext_resource type="PackedScene" uid="uid://ded1f6ahdulgi" path="res://scenes/game_scene/trap/flame_trap.tscn" id="3_371l4"]
+[ext_resource type="PackedScene" uid="uid://pgrq765xgr23" path="res://scenes/game_scene/trap/cleanable_trap_blood.tscn" id="4_asvns"]
+[ext_resource type="PackedScene" uid="uid://dh0htyjhkxvlp" path="res://scenes/game_scene/trap/cleanable_trap_skull.tscn" id="5_81r2a"]
+[ext_resource type="PackedScene" uid="uid://ctcac06on3x3m" path="res://scenes/game_scene/trap/cleanable_trap_gold.tscn" id="6_1n1px"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t8ohj"]
-scenes/1/scene = ExtResource("1_bajsr")
-scenes/2/scene = ExtResource("2_tqkqm")
-scenes/3/scene = ExtResource("3_tqkqm")
-scenes/4/scene = ExtResource("4_tk154")
-scenes/5/scene = ExtResource("5_sa2mn")
-scenes/6/scene = ExtResource("6_6n54v")
+scenes/1/scene = ExtResource("1_3w7ni")
+scenes/2/scene = ExtResource("2_ppyk3")
+scenes/3/scene = ExtResource("3_371l4")
+scenes/4/scene = ExtResource("4_asvns")
+scenes/5/scene = ExtResource("5_81r2a")
+scenes/6/scene = ExtResource("6_1n1px")
 
 [resource]
 sources/0 = SubResource("TileSetScenesCollectionSource_t8ohj")

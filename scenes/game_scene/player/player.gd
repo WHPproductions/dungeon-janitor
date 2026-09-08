@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 signal died
 signal health_changed(current: int, maximum: int)
@@ -23,9 +24,9 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if health <= 0:
 		return
-
+	
 	is_cleaning = _is_cleaning_nearby()
-
+	
 	var direction := _get_movement_input()
 	if direction and not is_cleaning:
 		velocity = direction * speed
@@ -52,10 +53,10 @@ func _get_movement_input() -> Vector2:
 func _is_cleaning_nearby() -> bool:
 	if not Input.is_action_pressed("interact"):
 		return false
-	for cleanable in get_tree().get_nodes_in_group("cleanable"):
+	for cleanable in get_tree().get_nodes_in_group("Cleanable"):
 		if not is_instance_valid(cleanable):
 			continue
-		if global_position.distance_to(cleanable.global_position) <= 14.0:
+		if global_position.distance_to(cleanable.global_position) <= 10.0:
 			return true
 	return false
 
@@ -68,6 +69,8 @@ func take_damage(amount: int = 1) -> void:
 		die()
 		return
 	health = maxi(health - amount, 0)
+	$HurtSFX.pitch_scale = randf_range(0.5, 1.0)
+	$HurtSFX.play()
 	health_changed.emit(health, max_health)
 	modulate = Color(1.5, 0.5, 0.5)
 	var tween := create_tween()

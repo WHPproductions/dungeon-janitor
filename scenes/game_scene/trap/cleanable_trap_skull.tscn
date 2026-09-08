@@ -1,45 +1,46 @@
-[gd_scene format=3 uid="uid://pgrq765xgr23"]
+[gd_scene format=3 uid="uid://dh0htyjhkxvlp"]
 
-[ext_resource type="Script" uid="uid://chefigxoxtjm7" path="res://scenes/game_scene/trap/trap_3_4_5.gd" id="1_2h11u"]
-[ext_resource type="Texture2D" uid="uid://10815vy8kapq" path="res://scenes/game_scene/trap/blood_trap.png" id="2_dhybj"]
-[ext_resource type="Texture2D" uid="uid://bhn34y2u6ewx6" path="res://scenes/game_scene/trap/trap_monster.png" id="3_eow8a"]
-[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="7_ofstq"]
+[ext_resource type="Script" uid="uid://chefigxoxtjm7" path="res://scenes/game_scene/trap/cleanable_trap.gd" id="1_d41n2"]
+[ext_resource type="Texture2D" uid="uid://bvba80q6ndmbo" path="res://scenes/game_scene/trap/skeleton_trap.png" id="2_md378"]
+[ext_resource type="Texture2D" uid="uid://bhn34y2u6ewx6" path="res://scenes/game_scene/trap/trap_monster.png" id="3_56uh1"]
+[ext_resource type="Shape2D" uid="uid://b18eehdwm45kw" path="res://scenes/game_scene/cleanable/cleanable_range_collision.tres" id="4_md378"]
+[ext_resource type="Theme" uid="uid://b826k6lvqtor5" path="res://resources/themes/gdp_theme/gdp_theme.tres" id="4_mu02k"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sgedu"]
-atlas = ExtResource("2_dhybj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv53m"]
+atlas = ExtResource("2_md378")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dppu5"]
-atlas = ExtResource("2_dhybj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_04yp3"]
+atlas = ExtResource("2_md378")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_12x1l"]
-atlas = ExtResource("2_dhybj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_u37xs"]
+atlas = ExtResource("2_md378")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_manpb"]
-atlas = ExtResource("3_eow8a")
+atlas = ExtResource("3_56uh1")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j1w5u"]
-atlas = ExtResource("3_eow8a")
+atlas = ExtResource("3_56uh1")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxnj7"]
-atlas = ExtResource("3_eow8a")
+atlas = ExtResource("3_56uh1")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_trap"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sgedu")
+"texture": SubResource("AtlasTexture_hv53m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dppu5")
+"texture": SubResource("AtlasTexture_04yp3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_12x1l")
+"texture": SubResource("AtlasTexture_u37xs")
 }],
 "loop": 0,
 "name": &"default",
@@ -60,19 +61,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_trap"]
-size = Vector2(14, 14)
-
-[node name="Trap_3" type="Area2D" unique_id=868093437]
+[node name="CleanableTrapSkull" type="Area2D" unique_id=868093437]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_2h11u")
+script = ExtResource("1_d41n2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791809998]
 sprite_frames = SubResource("SpriteFrames_trap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1621463452]
-shape = SubResource("RectangleShape2D_trap")
+shape = ExtResource("4_md378")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=956037567]
 visible = false
@@ -82,7 +80,7 @@ offset_left = -18.0
 offset_top = -22.0
 offset_right = 18.0
 offset_bottom = -14.0
-theme = ExtResource("7_ofstq")
+theme = ExtResource("4_mu02k")
 show_percentage = false
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

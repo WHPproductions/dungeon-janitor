@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://ded1f6ahdulgi"]
+
+[ext_resource type="Script" uid="uid://c7viiu1gijkq7" path="res://scenes/game_scene/trap/flame_trap.gd" id="1_ye17i"]
+[ext_resource type="Texture2D" uid="uid://dfu3005vsfjk0" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_1.png" id="2_c0roy"]
+[ext_resource type="Texture2D" uid="uid://lgcjmh153vpv" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_2.png" id="3_wxta4"]
+[ext_resource type="Texture2D" uid="uid://h3ramcnslo10" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_3.png" id="4_uidej"]
+[ext_resource type="Texture2D" uid="uid://cs4jh836ndo87" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_4.png" id="5_m34io"]
+[ext_resource type="Texture2D" uid="uid://b4i7521hmn1qf" path="res://scenes/dungeon_assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_4.png" id="6_1gmdu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp54e"]
+atlas = ExtResource("2_c0roy")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyt4o"]
+atlas = ExtResource("3_wxta4")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lek78"]
+atlas = ExtResource("4_uidej")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcr7k"]
+atlas = ExtResource("5_m34io")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1j4s"]
+atlas = ExtResource("6_1gmdu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp54e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyt4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lek78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcr7k")
+}],
+"loop": 0,
+"name": &"active",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1j4s")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trap"]
+size = Vector2(14, 14)
+
+[sub_resource type="Gradient" id="Gradient_dik0f"]
+offsets = PackedFloat32Array(0, 0.2802198, 0.66483516, 1)
+colors = PackedColorArray(0.94509804, 0.4862745, 0.08235294, 1, 0.7073993, 0.4103869, 0.10391856, 1, 1, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5h11f"]
+gradient = SubResource("Gradient_dik0f")
+
+[sub_resource type="Curve" id="Curve_gcq6q"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.25925925, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jx8tp"]
+curve = SubResource("Curve_gcq6q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5h11f"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(5.22, 4.695, 0)
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+angular_velocity_min = 359.99997
+angular_velocity_max = 359.99997
+scale_min = 5.0
+scale_max = 5.0
+scale_curve = SubResource("CurveTexture_jx8tp")
+color_ramp = SubResource("GradientTexture1D_5h11f")
+
+[node name="FlameTrap" type="Area2D" unique_id=868093437 groups=["Trap"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ye17i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=791809998]
+sprite_frames = SubResource("SpriteFrames_trap")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1621463452]
+shape = SubResource("RectangleShape2D_trap")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=548160156]
+emitting = false
+amount = 20
+lifetime = 0.45
+process_material = SubResource("ParticleProcessMaterial_5h11f")
+
+[node name="CountdownTimer" type="Timer" parent="." unique_id=1643556671]
+wait_time = 2.3
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

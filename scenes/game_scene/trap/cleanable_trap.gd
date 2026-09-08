@@ -30,13 +30,13 @@ func _process(delta: float) -> void:
 
 	_progress_bar.global_position = global_position + Vector2(-18, -22)
 
-	if _player_in_range and Input.is_action_pressed("ui_accept"):
+	if _player_in_range and Input.is_action_pressed("interact"):
 		_progress += delta / clean_time
 		_progress_bar.visible = true
 		_progress_bar.value = _progress * 100.0
 		if _progress >= 1.0:
 			_finish_cleaning()
-	elif _progress > 0.0 and not Input.is_action_pressed("ui_accept"):
+	elif _progress > 0.0 and not Input.is_action_pressed("interact"):
 		_progress = maxf(_progress - delta * 0.5, 0.0)
 		_progress_bar.value = _progress * 100.0
 		if _progress <= 0.0:
@@ -48,8 +48,8 @@ func _finish_cleaning() -> void:
 		return
 	_sprite.play("eat")
 	_the_player.take_damage(1)
+	_progress_bar.visible = false
 	_is_cleaned = true
-	#queue_free()
 
 
 func _on_body_entered(body: Node2D) -> void:

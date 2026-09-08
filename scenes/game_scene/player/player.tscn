@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bokhb2sqnmtnm" path="res://scenes/game_scene/player/skeleton_attack.png" id="3_q7si0"]
 [ext_resource type="Texture2D" uid="uid://bwq0dlha5x1qb" path="res://scenes/game_scene/player/skeleton_movement.png" id="4_hx1i0"]
 [ext_resource type="AudioStream" uid="uid://b12bdu3hb4wbp" path="res://scenes/game_scene/player/sweeping.mp3" id="6_f2e1w"]
+[ext_resource type="AudioStream" uid="uid://3d5wmmamhm52" path="res://scenes/game_scene/player/hurt.wav" id="7_4yb8v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a14if"]
 atlas = ExtResource("2_f2e1w")
@@ -373,3 +374,6 @@ shape = SubResource("CircleShape2D_hyg1l")
 stream = ExtResource("6_f2e1w")
 volume_db = 8.564
 bus = &"SFX"
+
+[node name="HurtSFX" type="AudioStreamPlayer" parent="." unique_id=1998324262]
+stream = ExtResource("7_4yb8v")

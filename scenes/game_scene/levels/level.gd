@@ -56,12 +56,13 @@ func open_tutorials() -> void:
 
 
 func _count_cleanables() -> void:
-	_total_cleanables = get_tree().get_nodes_in_group("cleanable").size()
+	_total_cleanables = get_tree().get_nodes_in_group("Cleanable").size()
+	print_debug(get_tree().get_nodes_in_group("Cleanable"))
 	_cleaned_count = 0
 
 
 func _connect_cleanables() -> void:
-	for cleanable in get_tree().get_nodes_in_group("cleanable"):
+	for cleanable in get_tree().get_nodes_in_group("Cleanable"):
 		if cleanable.has_signal("cleaned"):
 			cleanable.cleaned.connect(_on_cleanable_cleaned)
 

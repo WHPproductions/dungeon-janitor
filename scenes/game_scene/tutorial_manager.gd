@@ -15,7 +15,7 @@ func open_tutorials() -> void:
 		if tutorial_menu == null:
 			push_warning("tutorial failed to open %s" % tutorial_scene)
 			return
-		get_tree().current_scene.get_node("ui").call_deferred("add_child", tutorial_menu)
+		get_tree().current_scene.call_deferred("add_child", tutorial_menu)
 		if tutorial_menu.has_signal(&"closed"):
 			await tutorial_menu.closed
 		else:

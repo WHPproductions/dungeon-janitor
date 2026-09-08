@@ -14,7 +14,6 @@ var _is_cleaned: bool = false
 
 
 func _ready() -> void:
-	add_to_group("cleanable")
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	_progress_bar.max_value = 100.0
@@ -52,10 +51,10 @@ func _finish_cleaning() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body is Player:
 		_player_in_range = true
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body is Player:
 		_player_in_range = false
